@@ -1,0 +1,36 @@
+:root, body {
+    height: 100vh;
+}
+
+header {
+    background: rgb(91,141,209);
+    background: linear-gradient(90deg, rgba(91,141,209,1) 0%, rgba(5,7,74,1) 100%);
+}
+
+.search {
+    background-color: #3993ed;
+    border: none;
+}
+
+.search:hover {
+    background-color: #6ca9e6;
+    border: none;
+}
+
+.city-btn {
+    background-color: #a6a6a6;
+    border: none;
+}
+
+.city-btn:hover {
+    background-color: #c9c9c9;
+    border: none;
+}
+
+.forecast-card {
+    background-color: #26384a;
+}
+
+form {
+    border-bottom: solid lightgray .25rem
+}

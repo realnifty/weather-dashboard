@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/025acac81f.js" crossorigin="anonymous"></script>
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header class="mb-3">
+        <h1 class="fw-bold py-2 w-100 text-white text-center">Weather Dashboard</h1>
+    </header>
+    <main class="row mx-1 h-75">
+        <div class="col-3">
+            <div class="d-flex flex-column justify-content-between">
+                <h2 class="fw-bold">Search for a City:</h2>
+                <form id="search-form" class="d-flex flex-column mb-2">
+                    <label for="city-search"></label>
+                    <input id="search" name="city-search" placeholder="e.g. San Diego" type="text" class="w-100 rounded py-2">
+                    <button id="search-btn" type="submit" class="search text-white w-100 rounded my-3 py-1">Search</button>
+                </form>
+            </div>
+            <button type="submit" class="city-btn text-black w-100 rounded my-2 py-1">Austin</button>
+            <button type="submit" class="city-btn text-black w-100 rounded my-2 py-1">Chicago</button>
+            <button type="submit" class="city-btn text-black w-100 rounded my-2 py-1">Austin</button>
+            <button type="submit" class="city-btn text-black w-100 rounded my-2 py-1">Chicago</button>
+        </div>
+        <div class="col-9 h-75">
+            <div class="border border-dark">
+                <div class="mx-2">
+                    <div class="m-1" id="current-forecast-container">
+                        <h2 class="fw-bold">Atlanta --<span> <i class="fa-solid fa-cloud"></i></span></h2>
+                        <p>Temp:</p>
+                        <p>Wind:</p>
+                        <p>Humidity:</p>
+                        <p>UV Index:</p>
+                    </div>
+                </div>
+            </div>
+            <h4 class="fw-bold py-2">5-Day Forecast:</h4>
+            <div class="d-flex flex-row justify-content-between">
+                <div class="col-2 text-white forecast-card">
+                    <div class="future-forecast-details m-2">
+                        <h5 class="fw-bold"><span>--</span></h5>
+                        <h4><i class="fa-solid fa-cloud"></i></h4>
+                        <p>Temp: <span>--</span></p>
+                        <p>Wind: <span>--</span></p>
+                        <p>Humidity: <span>--</span></p>
+                    </div>
+                </div>
+                <div class="col-2 text-white forecast-card">
+                    <div class="future-forecast-details m-2">
+                        <h5 class="fw-bold"><span>--</span></h5>
+                        <h4><i class="fa-solid fa-cloud"></i></h4>
+                        <p>Temp: <span>--</span></p>
+                        <p>Wind: <span>--</span></p>
+                        <p>Humidity: <span>--</span></p>
+                    </div>
+                </div>
+                <div class="col-2 text-white forecast-card">
+                    <div class="future-forecast-details m-2">
+                        <h5 class="fw-bold"><span>--</span></h5>
+                        <h4><i class="fa-solid fa-cloud"></i></h4>
+                        <p>Temp: <span>--</span></p>
+                        <p>Wind: <span>--</span></p>
+                        <p>Humidity: <span>--</span></p>
+                    </div>
+                </div>
+                <div class="col-2 text-white forecast-card">
+                    <div class="future-forecast-details m-2">
+                        <h5 class="fw-bold"><span>--</span></h5>
+                        <h4><i class="fa-solid fa-cloud"></i></h4>
+                        <p>Temp: <span>--</span></p>
+                        <p>Wind: <span>--</span></p>
+                        <p>Humidity: <span>--</span></p>
+                    </div>
+                </div>
+                <div class="col-2 text-white forecast-card">
+                    <div class="future-forecast-details m-2">
+                        <h5 class="fw-bold"><span>--</span></h5>
+                        <h4><i class="fa-solid fa-cloud"></i></h4>
+                        <p>Temp: <span>--</span></p>
+                        <p>Wind: <span>--</span></p>
+                        <p>Humidity: <span>--</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>  
+</body>
+</html>
