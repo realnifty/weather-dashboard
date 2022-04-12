@@ -51,95 +51,69 @@ var getCoords = function (cityName) {
                             else if (data.current.uvi > 10 && data.current.uvi <= 11) {
                                 curUvi.classList.add(`extreme`);
                             }
+                            
                             var d1Date = document.querySelector('#d1date');
                             d1Date.innerText = moment().add(1, 'days').format('l');
-                            //icon
                             var d1Icon = document.querySelector('#d1icon');
                             var d1wIcon = data.daily[0].weather[0].icon;
-                            //console.log(iconD1);
                             var d1IconGet = `http://openweathermap.org/img/wn/${d1wIcon}@2x.png`;
-                            //console.log(iconLinkD1);
                             d1Icon.src = d1IconGet;
-                            // temp
                             var d1Temp = document.querySelector('#d1temp');
                             d1Temp.innerText = `${data.daily[0].temp.day}F`;
-                            // wind
                             var d1Wind = document.querySelector('#d1wind');
                             d1Wind.innerText = `${data.daily[0].wind_speed} MPH`;
-                            // humidity
                             var d1Humidity = document.querySelector('#d1humid');
                             d1Humidity.innerText = `${data.daily[0].humidity}%`;
-                        
-                            // day 2 after current day
+
                             var d2Date = document.querySelector('#d2date');
                             d2Date.innerText = moment().add(2, 'days').format('l');
-                        
-                            // icon
                             var d2Icon = document.querySelector('#d2icon');
                             var d2wIcon = data.daily[1].weather[0].icon;
                             var d2IconGet = `http://openweathermap.org/img/wn/${d2wIcon}@2x.png`;
                             d2Icon.src = d2IconGet;
-                            // temp
                             var d2Temp = document.querySelector('#d2temp');
                             d2Temp.innerText = `${data.daily[1].temp.day}F`;
-                            // wind
                             var d2Wind = document.querySelector('#d2wind');
                             d2Wind.innerText = `${data.daily[1].wind_speed} MPH`;
-                            // humidity
                             var d2Humidity = document.querySelector('#d2humid');
                             d2Humidity.innerText = `Humidity: ${data.daily[1].humidity}%`;
-                        
-                            // day 3 after current day
+
                             var d3Date = document.querySelector('#d3date');
                             d3Date.innerText = moment().add(3, 'days').format('l');
-                            // icon
                             var d3Icon = document.querySelector('#d3icon');
                             var d3wIcon = data.daily[2].weather[0].icon;
                             var d3wIconGet = `http://openweathermap.org/img/wn/${d3wIcon}@2x.png`;
                             d3Icon.src = d3wIconGet;
-                            // temp
                             var d3Temp = document.querySelector('#d3temp');
                             d3Temp.innerText = `${data.daily[2].temp.day}F`;
-                            // wind
                             var d3Wind = document.querySelector('#d3wind');
                             d3Wind.innerText = `${data.daily[2].wind_speed} MPH`;
-                            // humidity
                             var d3Humidity = document.querySelector('#d3humid');
                             d3Humidity.innerText = `${data.daily[2].humidity}%`;
                         
-                            // day 4 after current day
                             var d4Date = document.querySelector('#d4date');
                             d4Date.innerText = moment().add(4, 'days').format('l');
-                            // icon
                             var d4Icon = document.querySelector('#d4icon');
                             var d4wIcon = data.daily[3].weather[0].icon;
                             var d4wIconGet = `http://openweathermap.org/img/wn/${d4wIcon}@2x.png`;
                             d4Icon.src = d4wIconGet;
-                            // temp
                             var d4Temp = document.querySelector('#d4temp');
                             d4Temp.innerText = `${data.daily[3].temp.day}F`;
-                            // wind
                             var d4Wind = document.querySelector('#d4wind');
                             d4Wind.innerText = `${data.daily[3].wind_speed} MPH`;
-                            // humidity
                             var d4Humidity = document.querySelector('#d4humid');
                             d4Humidity.innerText = `${data.daily[3].humidity}%`;
                         
-                            // day 5 after current day
                             var d5Date = document.querySelector('#d5date');
                             d5Date.innerText = moment().add(5, 'days').format('l');
-                            // icon
                             var d5Icon = document.querySelector('#d5icon');
                             var d5wIcon = data.daily[4].weather[0].icon;
                             var d5wiconGet = `http://openweathermap.org/img/wn/${d5wIcon}@2x.png`
                             d5Icon.src = d5wiconGet;
-                            //temp
                             var d5Temp = document.querySelector('#d5temp');
                             d5Temp.innerText = `${data.daily[4].temp.day}F`;
-                            // wind
                             var d5wind = document.querySelector('#d5wind');
                             d5wind.innerText = `${data.daily[4].wind_speed} MPH`;
-                            // humididty
                             var d5Humidity = document.querySelector('#d5humid');
                             d5Humidity.innerText = `${data.daily[4].humidity}%`
 
