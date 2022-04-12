@@ -39,7 +39,7 @@ var getCoords = function (cityName) {
                             if(data.current.uvi >= 0 && data.current.uvi <= 2 ) {
                                 curUvi.classList.add(`low`);
                             }
-                            else if (data.current.uvi >= 2.01 && data.current.uvi <= 5 ) {
+                            else if (data.current.uvi >= 2 && data.current.uvi <= 5 ) {
                                 curUvi.classList.add(`moderate`);
                             }
                             else if (data.current.uvi > 5 && data.current.uvi <= 7) {
