@@ -7,7 +7,7 @@ var currentDay = moment().format('L');
 
 var getCoords = function (cityName) {
     var cityName = cityInputEl.value.trim();
-    var lonlatAPI = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=08fa64b302981421cf0aa8c34c592018`;
+    var lonlatAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=08fa64b302981421cf0aa8c34c592018`;
 
     fetch(lonlatAPI)
     .then(function(response) {
