@@ -6,7 +6,6 @@ var cityListBtn = document.querySelector(`.city-btn`);
 var currentDay = moment().format('L');
 
 var getCoords = function (cityName) {
-    var cityName = cityInputEl.value.trim();
     var lonlatAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=08fa64b302981421cf0aa8c34c592018`;
 
     fetch(lonlatAPI)
@@ -116,8 +115,6 @@ var getCoords = function (cityName) {
                             d5wind.innerText = `${data.daily[4].wind_speed} MPH`;
                             var d5Humidity = document.querySelector('#d5humid');
                             d5Humidity.innerText = `${data.daily[4].humidity}%`
-
-                            console.log(data);
                         })
                     }
                     else {
@@ -153,8 +150,18 @@ var makeCityBtn = function() {
     var cityBtn = document.createElement(`button`);
     cityBtn.classList = `city-btn text-black w-100 rounded my-2 py-1`;
     cityBtn.setAttribute(`type`, `submit`);
+    cityBtn.setAttribute(`id`, `${cityInputEl.value.trim()}`);
     cityBtn.textContent = cityInputEl.value.trim();
     cityBtnContainer.appendChild(cityBtn);
+    var cityBtn2 = document.querySelectorAll('.city-btn');
+
+    cityBtn2.forEach((button) => {
+        button.addEventListener('click', (event) => {
+            var repeatSearch = event.currentTarget.id;
+            getCoords(repeatSearch);
+        });
+    })
+
 };
 
 
